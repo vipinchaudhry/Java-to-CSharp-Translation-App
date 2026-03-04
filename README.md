@@ -7,8 +7,7 @@ Built with PyQt5 for the interface and HuggingFace Transformers for model infere
 
 ## Model
 
-The translation model is a fine-tuned version of CodeT5, trained on Java/C# code pairs. It achieves a **94% CodeBLEU score** on the test set.
-
+The translation model is a fine-tuned version of CodeT5, trained on Java/C# code pairs.
 Model hosted on HuggingFace: [vipinchaudhry/codet5-java-to-csharp-translation](https://huggingface.co/vipinchaudhry/codet5-java-to-csharp-translation/tree/main)
 
 The model is downloaded automatically on first run and cached locally — no manual setup needed.
