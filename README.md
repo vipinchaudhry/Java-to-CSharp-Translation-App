@@ -1,18 +1,18 @@
-# ☕ → 🔷 Java to C# Code Translator
+# Java to C# Code Translator
 
 A desktop app that uses a fine-tuned AI model to automatically translate Java source code into C#.
 Paste in your Java, click a button, get C#. That's it.
 
 ![App Screenshot](screenshot.png)
 
-## 🌟 Highlights
+##Highlights
 
 - **No API key or internet connection needed after first run** — model is cached locally
 - **Handles real syntax differences** — converts `ArrayList` to `IList`, `System.out.println` to `Console.WriteLine`, and more
 - **Simple two-panel UI** — paste Java on the left, get C# on the right
 - **Runs on CPU** — no GPU required
 
-## ℹ️ Overview
+## Overview
 
 Migrating a Java codebase to C# is a tedious, error-prone process. While the two languages share similar syntax and structure, there are enough differences — naming conventions, type systems, standard library calls — that manual translation is slow and frustrating.
 
@@ -20,14 +20,14 @@ This app uses a fine-tuned [CodeT5](https://huggingface.co/Salesforce/codet5-bas
 
 It's useful for developers working with legacy Java code, or anyone learning the differences between Java and C#.
 
-## ⬇️ Installation
+## Installation
 ```bash
 pip install torch transformers PyQt5 sentencepiece protobuf
 ```
 
 Requires Python 3.8+. Developed and tested on Windows.
 
-## 🚀 Usage
+## Usage
 ```bash
 python app.py
 ```
@@ -36,13 +36,13 @@ Paste your Java code into the left panel and click **Translate Code**. The C# tr
 
 > **Note:** The first run will download the model (~900MB) and cache it locally. Subsequent runs load instantly.
 
-## 🔬 Examples
+## Examples
 
 Each example shows the Java input, the expected C# output, and the actual model output.
 
 ---
 
-**Example 1 — Simple method ✅**
+**Example 1 — Simple method**
 ```java
 // Java Input
 public String getProcessName(int id) {
@@ -64,7 +64,7 @@ public virtual string GetProcessName(int id) {
 
 ---
 
-**Example 2 — Type conversion ✅**
+**Example 2 — Type conversion**
 ```java
 // Java Input
 public int listSize(ArrayList<String> list) {
@@ -86,7 +86,7 @@ public virtual int ListSize(IList<string> list) {
 
 ---
 
-**Example 3 — Exception handling ⚠️**
+**Example 3 — Exception handling**
 ```java
 // Java Input
 public void readFile(String path) {
@@ -125,7 +125,7 @@ public virtual void ReadFile(string path) {
 }
 ```
 
-## ⚠️ Limitations
+## Limitations
 
 This is a small fine-tuned model and has some known shortcomings:
 
@@ -135,7 +135,7 @@ This is a small fine-tuned model and has some known shortcomings:
 - Output is not always perfectly formatted — minor cleanup may be needed
 - Input should be valid Java code — entering plain text or non-code input produces nonsensical output or may cause the app to hang
 
-## 🤖 Model and Training
+## Model and Training
 
 This app uses a fine-tuned version of [CodeT5](https://huggingface.co/Salesforce/codet5-base) by Salesforce, a pre-trained model designed for code understanding and generation tasks.
 
