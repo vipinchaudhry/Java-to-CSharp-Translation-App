@@ -133,6 +133,7 @@ This is a small fine-tuned model and has some known shortcomings:
 - May miss closing brackets on longer or more complex methods
 - Works best on single methods rather than entire class files
 - Output is not always perfectly formatted — minor cleanup may be needed
+- Input should be valid Java code — entering plain text or non-code input produces nonsensical output or may cause the app to hang
 
 ## 🤖 Model and Training
 
